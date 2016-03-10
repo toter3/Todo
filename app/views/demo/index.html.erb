@@ -1,0 +1,25 @@
+<div id = "main_container" class="todos index">
+    
+    <h1> ToDo List</h1>
+    <%= link_to("New", '#', :class => 'action new') %>
+    
+    <table>
+        <tr>
+            <th>Todo</th>
+            <th>Content</th>
+            <th>Last Update</th>
+        </tr>
+        <% @todos.each do |todo| %>
+            <tr>
+                <td><%= todo.header %></td>
+                <td><%= todo.content %></td>
+                <td><%= todo.updated_at %></td>
+                <td class="actions">
+                    <%= link_to("Show",'#', :class => 'action show') %>
+                    <%= link_to("Edit",'#', :class => 'action edit') %>
+                    <%= link_to("Delete",'#', :class => 'action delete') %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+</div>

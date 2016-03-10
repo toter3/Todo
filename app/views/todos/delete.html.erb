@@ -1,0 +1,28 @@
+<%= link_to("Back to list",{:action => 'index'}, :class => 'back') %>
+<h1>Delete Task</h1>
+<div id="delete_form">
+    <%= form_for(:todo, :url => {:action => 'destroy', :id => @todo.id}) do |f| %>  
+        <h2>Are you sure you want to Delete this task?</h2>
+        <table>
+            
+            <tr>
+                <th>Header</th>
+                <td><%= f.label(:header) %></td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td><%= f.label(:content) %></td>
+            </tr>
+            <tr>
+                <th>Done</th>
+                <td><%= f.label(:done) %></td>
+            </tr>
+            
+        </table>
+        
+        <div class="form_buttons">
+            <%= submit_tag("Delete") %>
+        </div>
+    
+    <% end %>
+</div>

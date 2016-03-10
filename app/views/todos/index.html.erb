@@ -1,0 +1,46 @@
+
+<div id = "main_container" class="todos index">
+    
+    <h1> ToDo List</h1>
+    
+    <%= link_to("New", {:action => 'new'}, :class => 'action_new button') %>
+    
+    <br>
+      
+    <table class="index_tab">
+
+        <% @todos.each do |todo| %>
+        
+            <% if todo.done == true %>
+             <tr  class='strikeout' id = '<%= todo.id %>'>
+            <% else %>
+             <tr id = '<%= todo.id %>'>
+            <% end %>
+                <td class = "cb_container"><input type='checkbox' class='checkboxes' 
+                           onchange = "done_change('<%= todo.id %>')"
+                           <% if todo.done == true
+                                    %>checked = 'checked'<%
+                                end %></td>
+                    
+                <td class = 'header'><%= todo.header %></td>
+                <td class = 'content'><%= truncate(todo.content, :length => 30, 
+                                    :omission => '...') %></td>
+                <td class = 'update_time'><%= todo.updated_at %></td>
+                <td class="actions">
+                    <%= link_to("Show", {:action => 'show', :id => todo.id},                            :class => 'action show button') %>
+                    <%= link_to("Edit",{:action => 'edit', :id => todo.id},                            :class => 'action edit button') %>
+                    <%= link_to("Delete",{:action => 'delete', :id => todo.id},                        :class => 'action delete button') %>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+    
+       <div id = "display_dones">
+        
+        <input type="checkbox" id="dones_checkbox" onchange="display_dones()"                    checked = "checked">
+        <label>Display done tasks</label>
+              
+        
+    </div>
+    
+</div>

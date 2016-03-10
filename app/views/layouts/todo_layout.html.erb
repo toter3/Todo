@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>ToDo list</title>
+        <%=stylesheet_link_tag('application', :media => 'all')%>
+        <%=javascript_include_tag('main_script') %>
+    </head>
+    <body>
+        <% if !flash[:notice].blank? %>
+        <div class = 'flush_notice'>
+            <%= flash[:notice] %>
+        </div>
+        <br>
+        <% end %>
+        <div id = "content">
+            <%= yield %>
+        </div>
+        <footer>
+            <p>אפליקציית המשימות החריפה במערב</p>
+        </footer>
+    </body>
+</html>

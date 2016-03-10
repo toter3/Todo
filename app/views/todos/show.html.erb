@@ -1,0 +1,12 @@
+<%= link_to("Back to list",{:action => 'index'}, :class => 'back') %>
+<br>
+
+<div class = 'container'>
+<h2><%= @todo.header %></h2>
+
+<p class = 'bigger_content'> <%= @todo.content %> </p>
+<p class = 'times'>Created at: <%= @todo.created_at %></p>
+<p class = 'times'>Last updated at: <%= @todo.updated_at %></p>
+
+<p class = 'done'> <%= @todo.done ? "Done!" : "Not Done yet!!!" %> </p>
+</div>

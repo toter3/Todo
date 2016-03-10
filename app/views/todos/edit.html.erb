@@ -1,0 +1,28 @@
+<%= link_to("Back to list",{:action => 'index'}, :class => 'back') %>
+<h1>Update Task</h1>
+<div id="edit_form">
+    <%= form_for(:todo, :url => {:action => 'update', :id => @todo.id}) do |f| %>
+        
+        <table>
+            
+            <tr>
+                <th>Header</th>
+                <td><%= f.text_field(:header) %></td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td><%= f.text_area(:content, cols: "30", rows: "10") %></td>
+            </tr>
+            <tr>
+                <th>Done</th>
+                <td><%= f.check_box(:done) %></td>
+            </tr>
+            
+        </table>
+        
+        <div class="form_buttons">
+            <%= submit_tag("Update") %>
+        </div>
+    
+    <% end %>
+</div>
