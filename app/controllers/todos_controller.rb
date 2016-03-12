@@ -52,7 +52,6 @@ class TodosController < ApplicationController
     
   def update_done
       
-      p params
       @todo = Todo.find(params[:id])
       if @todo.update_attributes(todo_params)
           flash[:notice] = "Task updated!"

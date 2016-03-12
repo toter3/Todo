@@ -11,9 +11,9 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: todo_dev2
+  database: todo_dev
   pool: 5
-  username: ToDo12
+  username: ToDo1
   password: JerrySan100
   host: localhost
 

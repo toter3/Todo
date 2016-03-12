@@ -75,5 +75,8 @@ function mark_line(id, is_done){
     }
     else{
         $('#'+id).addClass('strikeout');
-    }
+    };
+    
 };
+
+

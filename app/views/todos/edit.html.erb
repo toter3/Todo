@@ -1,4 +1,4 @@
-<%= link_to("Back to list",{:action => 'index'}, :class => 'back') %>
+<%= link_to("Back to list",{:action => 'index'}, :class => 'back button') %>
 <h1>Update Task</h1>
 <div id="edit_form">
     <%= form_for(:todo, :url => {:action => 'update', :id => @todo.id}) do |f| %>

@@ -60,13 +60,20 @@ tr:nth-child(odd) {
     display: none;
 }
 
-.container{
-    overflow: hidden;
-    border: solid 1px rgb(245,230,100);
-    width: 30em;
+.show_container{
+    width: 50%;
+    
 }
 
-.container p{
+.show_container p{
+    padding: 5px;
+}
+
+.show_container p:nth-child(even) {
+    background-color: hsla(206, 60%, 90%, 1);
+}
+.show_container p:nth-child(odd) {
+    background-color: #EDECFF;
     
 }
 
@@ -84,6 +91,10 @@ footer{
 
 .update_time{
     font-size: .8em;
+}
+
+div {
+    margin-bottom: 10px;
 }
 
 

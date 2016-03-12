@@ -1,4 +1,4 @@
-<%= link_to("Back to list",{:action => 'index'}, :class => 'back') %>
+<%= link_to("Back to list",{:action => 'index'}, :class => 'back button') %>
 <h1>Delete Task</h1>
 <div id="delete_form">
     <%= form_for(:todo, :url => {:action => 'destroy', :id => @todo.id}) do |f| %>  

@@ -11,6 +11,6 @@ class CreateTodos < ActiveRecord::Migration
   end
   
     def down
-        drop_table :users
+        drop_table :todos
     end
 end
