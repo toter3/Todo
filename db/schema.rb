@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308182310) do
+ActiveRecord::Schema.define(version: 20160310175114) do
+
+  create_table "dbs", force: true do |t|
+  end
 
   create_table "todos", force: true do |t|
     t.string   "header",     limit: 25,                  null: false
